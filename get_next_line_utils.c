@@ -6,7 +6,7 @@
 /*   By: mgamal <mgamal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 16:05:47 by mgamal            #+#    #+#             */
-/*   Updated: 2025/11/08 16:05:49 by mgamal           ###   ########.fr       */
+/*   Updated: 2025/11/12 14:09:04 by mgamal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	*extracted_line(char *arr)
 	int		i;
 	char	*line;
 
-	if (!arr || !arr[0])
+	if (!arr[0])
 		return (NULL);
 	i = 0;
 	while (arr[i] && arr[i] != '\n')
