@@ -20,7 +20,7 @@ char	*updated(char *arr)
 	int		j;
 
 	i = 0;
-	if (!arr)
+	if (!arr && arr[i] == '\0')
 		return (NULL);
 	while (arr[i] && arr[i] != '\n')
 		i++;
@@ -69,7 +69,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	char		*tmp;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE == INT_MAX)
 		return (NULL);
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buffer)
